@@ -1,41 +1,43 @@
-package com.techprimers.testing;
+package com.modulotest.testing;
 
 import org.junit.jupiter.api.*;
+
+import com.moduloclass.testing.Modulo;
 
 class FizzBuzzTest {
 
 	//	declaration d objet, pas encore instancie
-    public FizzBuzz fB;
+    public Modulo fB;
 
     @BeforeEach
     public void setUp() {
     	// initialisation de l objet
-        fB = new FizzBuzz();
+        fB = new Modulo();
     }
  // a titre d information
     @DisplayName("Spielen mit nummmer  = 1")
     @Test
     public void testNumber() {
     	//hadik fizzbuzz retourne un nombre et le compare avec 1
-        String fizzBuzz = fB.play(1);
-        Assertions.assertEquals(fizzBuzz, "1");
+        String Spiel = fB.play(1);
+        Assertions.assertEquals(Spiel, "1");
     }
 
     @DisplayName("Spielen mit nummmer = 3")
     @Test
     public void testFizz() {
-        String fizzBuzz = fB.play(3);
-        Assertions.assertEquals(fizzBuzz, "Fizz");
+        String Spiel = fB.play(3);
+        Assertions.assertEquals(Spiel, "Tic");
     }
 
     @DisplayName("Spielen mit nummmer = 5")
     @Test
     public void testBuzz() {
-        String fizzBuzz = fB.play(5);
-        Assertions.assertEquals(fizzBuzz, "Buzz");
+        String Spiel = fB.play(5);
+        Assertions.assertEquals(Spiel, "Tac");
     }
 
-    @DisplayName("Nicht mit den nummero 0 spielen = 0")
+    @DisplayName("Nicht mit den nummero 0 spielen ")
     @Test
     // l'affichage de l exception true
     public void testZero() {
