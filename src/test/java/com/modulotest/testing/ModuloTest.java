@@ -6,7 +6,7 @@ import com.moduloclass.testing.Modulo;
 
 class FizzBuzzTest {
 
-	//	declaration d objet, ddpads encore instancief
+	//	declaration d objet, ddpads encodre instancief
     public Modulo fB;
 
     @BeforeEach
