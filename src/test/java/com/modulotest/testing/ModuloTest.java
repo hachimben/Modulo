@@ -15,7 +15,7 @@ class FizzBuzzTest {
         fB = new Modulo();
     }
  // a titre d information
-    @DisplayName("Spielen mit nummmer  = 1")
+    @DisplayName("Spielen mit nummmer = 1")
     @Test
     public void testNumber() {
     	//hadik fizzbuzz retourne un nombre et le compare avec 1
