@@ -4,7 +4,7 @@ public class Modulo {
 
     public String play(int number) {
 
-        if (number == 0) throw new IllegalArgumentException("Nummer soll nicht 0 ssein");
+        if (number == 0) throw new IllegalArgumentException("Nummer sol nicht 0 ssein");
         if (number % 3 == 0) return "Tic";
         if (number % 5 == 0) return "Tac";
 
