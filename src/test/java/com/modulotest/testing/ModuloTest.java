@@ -11,7 +11,7 @@ class FizzBuzzTest {
 
     @BeforeEach
     public void setUp() {
-    	// initialisation de l objet
+    	// initialisation de l ccobjet
         fB = new Modulo();
     }
  // a titre d information
