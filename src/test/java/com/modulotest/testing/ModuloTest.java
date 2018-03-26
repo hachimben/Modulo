@@ -6,46 +6,42 @@ import com.moduloclass.testing.Modulo;
 
 class FizzBuzzTest {
 
-	//	declaration d objet, ddpads encodre instancief
+
     public Modulo fB;
 
     @BeforeEach
     public void setUp() {
-    	// initialisation de l ccobjesd
         fB = new Modulo();
     }
- // a titre d information
-    @DisplayName("Spielen mit nummmer = 1")
+
+    @DisplayName("Play FizzBuzz with number = 1")
     @Test
     public void testNumber() {
-    	//hadik fizzbuzz retourne un nombre et le compare avec 1
-        String Spiel = fB.play(1);
-        Assertions.assertEquals(Spiel, "1");
+        String fizzBuzz = fB.play(1);
+        Assertions.assertEquals(fizzBuzz, "1");
     }
 
-    @DisplayName("Spielen mit nummmer = 3")
+    @DisplayName("Play FizzBuzz with number = 3")
     @Test
     public void testFizz() {
-        String Spiel = fB.play(3);
-        Assertions.assertEquals(Spiel, "Tic");
+        String fizzBuzz = fB.play(3);
+        Assertions.assertEquals(fizzBuzz, "Fizz");
     }
 
-    @DisplayName("Spielen mit nummmer = 5")
+    @DisplayName("Play FizzBuzz with number = 5")
     @Test
     public void testBuzz() {
-        String Spiel = fB.play(5);
-        Assertions.assertEquals(Spiel, "Tac");
+        String fizzBuzz = fB.play(5);
+        Assertions.assertEquals(fizzBuzz, "Buzz");
     }
 
-    @DisplayName("Nicht mit den nummero 0 spielen ")
+    @DisplayName("Don't Play FizzBuzz with number = 0")
     @Test
-    // l'affichage de l exception true
     public void testZero() {
 
         Assertions.assertThrows(IllegalArgumentException.class,
                 () -> fB.play(0));
     }
-    // pour instancier a 0, machi instance fo9 i
 
     @AfterEach
     public void tearDown() {

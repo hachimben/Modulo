@@ -2,12 +2,13 @@ package com.moduloclass.testing;
 
 public class Modulo {
 
-    public String play(int number) {
+	  public String play(int number) {
 
-        if (number == 0) throw new IllegalArgumentException("Nummer soll nicht 0 ssein");
-        if (number % 3 == 0) return "Tic";
-        if (number % 5 == 0) return "Tac";
+	        if (number == 0) throw new IllegalArgumentException("Number must not be 0");
+	        if (number % 3 == 0) return "Fizz";
+	        if (number % 5 == 0) return "Buzz";
 
-        return String.valueOf(number);
-    }
+
+	        return String.valueOf(number);
+	    }
 }
