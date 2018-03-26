@@ -11,7 +11,7 @@ class FizzBuzzTest {
 
     @BeforeEach
     public void setUp() {
-    	// initialisation de l ccobjes
+    	// initialisation de l ccobjesd
         fB = new Modulo();
     }
  // a titre d information
