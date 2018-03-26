@@ -1,13 +1,12 @@
-package com.techprimers.testing;
+package com.moduloclass.testing;
 
-public class FizzBuzz {
+public class Modulo {
 
     public String play(int number) {
 
-        if (number == 0) throw new IllegalArgumentException("Numbe must not be 0");
-        if (number % 3 == 0) return "Fizz";
-        if (number % 5 == 0) return "Buzz";
-
+        if (number == 0) throw new IllegalArgumentException("Nummer soll nicht 0 sein");
+        if (number % 3 == 0) return "Tic";
+        if (number % 5 == 0) return "Tac";
 
         return String.valueOf(number);
     }
