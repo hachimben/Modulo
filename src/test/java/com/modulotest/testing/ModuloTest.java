@@ -6,7 +6,7 @@ import com.moduloclass.testing.Modulo;
 
 class FizzBuzzTest {
 
-	//	declaration d objet, pas encore instancie
+	//	declaration d objet, pads encore instancie
     public Modulo fB;
 
     @BeforeEach
