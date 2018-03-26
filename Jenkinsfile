@@ -1,32 +1,38 @@
 pipeline {
     agent any
-
-    stages {
-        stage ('Compile Stage') {
+  stages {
+    stage('debut du traitement') {
+      steps {
+        echo 'debut du traitement'
+      }
+    }
+    stage('git clone') {
+      steps {
+	git 'https://github.com/hachimben/Modulo.git'
+	}
+    }
+    stage ('Compile Stage') {
+		steps {
+                bat 'mvn clean compile'
+              }
+        }
+    stage ('Testing Stage') {
 
             steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn clean compile'
-                }
+                    bat 'mvn test'
+                
             }
         }
-
-        stage ('Testing Stage') {
-
-            steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn test'
-                }
-            }
-        }
-
-
         stage ('Deployment Stage') {
             steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn deploy'
-                }
+                    bat 'mvn clean install'
+                
             }
         }
-    }
-}
+        stage('fin du traitement') {
+      steps {
+        echo 'fin du traitement'
+      }
+    
+  }
+}}
