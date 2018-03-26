@@ -4,41 +4,46 @@ import org.junit.jupiter.api.*;
 
 class FizzBuzzTest {
 
+	//	declaration d objet, pas encore instancie
     public FizzBuzz fB;
 
     @BeforeEach
     public void setUp() {
+    	// initialisation de l objet
         fB = new FizzBuzz();
     }
-
-    @DisplayName("Play FizzBuzz with number = 1")
+ // a titre d information
+    @DisplayName("Spielen mit nummmer  = 1")
     @Test
     public void testNumber() {
+    	//hadik fizzbuzz retourne un nombre et le compare avec 1
         String fizzBuzz = fB.play(1);
         Assertions.assertEquals(fizzBuzz, "1");
     }
 
-    @DisplayName("Play FizzBuzz with number = 3")
+    @DisplayName("Spielen mit nummmer = 3")
     @Test
     public void testFizz() {
         String fizzBuzz = fB.play(3);
         Assertions.assertEquals(fizzBuzz, "Fizz");
     }
 
-    @DisplayName("Play FizzBuzz with number = 5")
+    @DisplayName("Spielen mit nummmer = 5")
     @Test
     public void testBuzz() {
         String fizzBuzz = fB.play(5);
         Assertions.assertEquals(fizzBuzz, "Buzz");
     }
 
-    @DisplayName("Don't Play FizzBuzz with number = 0")
+    @DisplayName("Nicht mit den nummero 0 spielen = 0")
     @Test
+    // l'affichage de l exception true
     public void testZero() {
 
         Assertions.assertThrows(IllegalArgumentException.class,
                 () -> fB.play(0));
     }
+    // pour instancier a 0, machi instance fo9 i
 
     @AfterEach
     public void tearDown() {
