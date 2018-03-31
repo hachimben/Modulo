@@ -1,9 +1,9 @@
 pipeline {
     agent any
   stages {
-    stage('debut du traitement') {
+    stage('Beginn von Testen') {
       steps {
-        echo 'debut du traitement'
+        echo 'Beginn von Testen'
       }
     }
     stage('git clone') {
@@ -29,9 +29,9 @@ pipeline {
                 
             }
         }
-        stage('fin du traitement') {
+        stage('Ende von Testen') {
       steps {
-        echo 'fin du traitement'
+        echo 'Ende von Testen'
       }
     
   }
